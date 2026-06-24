@@ -15,24 +15,18 @@ class Solution {
         ListNode list = head;
         ListNode prev = null;
 
-        // int count = 0;
-
         while(list != null && list.next != null) {
-            // if(count % 2 == 0) {
-                ListNode curr = list;
-                ListNode ahead = list.next;
+            ListNode curr = list;
+            ListNode ahead = list.next;
 
-                curr.next = ahead.next;
-                ahead.next = curr;
+            curr.next = ahead.next;
+            ahead.next = curr;
 
-                if(prev == null) head = ahead;
-                else prev.next = ahead;
+            if(prev == null) head = ahead;
+            else prev.next = ahead;
 
-                prev = curr;
-                list = curr.next;
-            // }
-            // else list = list.next;
-            // count++;
+            prev = curr;
+            list = curr.next;
         }
 
         return head;

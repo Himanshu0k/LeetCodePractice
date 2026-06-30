@@ -2,8 +2,6 @@ class Solution {
     public int findKthLargest(int[] nums, int k) {
         Arrays.sort(nums);
 
-        // for(int i: nums) System.out.println(i);
-        // System.out.println("Index: " + (nums.length - k));
         return nums[nums.length-k];
     }
 }
